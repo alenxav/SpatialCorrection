@@ -6,15 +6,15 @@ AOIl <- 1:100
 Nsel <- 90 #selection intensity = 10%
 r <- 33 ## Ranges 33
 p <- 30 ## Plots 30
-f <- 0.10
-Nrep <- 1
-Nchecks <- 3
-NF1 <- 30
-NF2 <- 30
+f <- 0.10 # Fraction of check plots in the field
+Nrep <- 1 # Number of replicates
+Nchecks <- 3 # Number of genotypes to be used as checks
+NF1 <- 30 # Number of crosses
+NF2 <- 30 # Offspring size
 mgen <- 0
-Nsnp <- 20000
+Nsnp <- 20000 # Number of observed SNPs in the array
 AOIlen <- length(AOIl)
-Spatial_per <- rep(c(0.1,0.25,0.5,0.75,0.90),len=max(AOIl))
+Spatial_per <- rep(c(0.1,0.25,0.5,0.75,0.90),len=max(AOIl)) # ICC of spatial variation = Vs/(Vs+Ve)
 h2_s <- runif(length(AOIl),0.01,0.99)
 #Spatial_simu(1,r=r,p=p,f=f,NF1=NF1,NF2=NF2,Nsnp=Nsnp)
 ### Running code ---------------------------------------------------------------
